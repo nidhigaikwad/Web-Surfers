@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Activities</title>
+    
+    <style>
+        /* General Styling */
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #ff8c00;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .header-image {
+            width: 80px;
+            height: auto;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 50%;
+        }
+
+        /* Section Styling */
+        section {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 140, 0, 0.5);
+        }
+
+        h2 {
+            color: #ff8c00;
+            border-bottom: 3px solid #ff8c00;
+            display: inline-block;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Event List Styling */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #292929;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(255, 140, 0, 0.4);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        ul li:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 0px 15px rgba(255, 140, 0, 0.6);
+        }
+
+        .event-info {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .event-info img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff8c00;
+            color: white;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styling */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #ff8c00, #ff5e00);
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(255, 94, 0, 0.5);
+}
+
+.header-image {
+    width: 80px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+}
+
+/* Section Styling */
+section {
+    width: 80%;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(255, 140, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    color: #ff8c00;
+    border-bottom: 3px solid #ff8c00;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Event List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #292929;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px rgba(255, 140, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(255, 140, 0, 0.6);
+}
+
+.event-info {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.event-info img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-info img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff8c00, #ff5e00);
+    color: white;
+    margin-top: 40px;
+    font-weight: bold;
+    box-shadow: 0px -4px 10px rgba(255, 94, 0, 0.5);
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Events & Activities</h1>
+        <img src="C:\Users\poly1\Downloads\logo.jpeg" alt="Logo" class="header-image">
+    </header>
+
+    <section class="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>
+                <strong>Tech Fest 2025</strong>
+                <div class="event-info">
+                    <p>Tech Fest 2024 is an annual technology exhibition featuring innovative projects, guest speakers, and workshops. Participants will get hands-on experience with AI, robotics, and emerging technologies.</p>
+                    <img src="C:\Users\poly1\Downloads\tech fest.png" alt="Tech Fest">
+                </div>
+            </li>
+            
+            <li>
+                <strong>Sports Meet</strong>
+                <div class="event-info">
+                    <p>Our Sports Meet brings together athletes from various disciplines for thrilling competitions, from track and field to team sports. It’s a celebration of teamwork, determination, and sportsmanship.</p>
+                    <img src="C:\Users\poly1\Downloads\bb.jpeg" alt="Sports Meet">
+                </div>
+            </li>
+            
+            <li>
+                <strong>Cultural Night</strong>
+                <div class="event-info">
+                    <p>Cultural Night showcases diverse traditions, artistic performances, and a grand celebration of heritage. Enjoy music, dance, and vibrant displays from different cultures around the world.</p>
+                    <img src="C:\Users\poly1\Downloads\cultural.jpeg" alt="Cultural Night">
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="past-events">
+        <h2>Past Events</h2>
+        <ul>
+            <li>
+                <strong>Tech Fests</strong>
+                <div class="event-info">
+                    <p>Past Tech Fests have featured cutting-edge innovations, interactive exhibits, and exciting competitions that push the boundaries of technology and creativity.</p>
+                    <img src="C:\Users\poly1\Downloads\tech2.jpg" alt="Tech Fests">
+                </div>
+            </li>
+            
+            <li>
+                <strong>Hackathons</strong>
+                <div class="event-info">
+                    <p>Hackathons have provided opportunities for developers to showcase their skills in high-pressure coding challenges, creating groundbreaking solutions in record time.</p>
+                    <img src="C:\Users\poly1\Downloads\hack.webp" alt="Hackathons">
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>
+                <strong>Best Tech Innovation Award</strong>
+                <div class="event-info">
+                    <p>Our team won the prestigious Best Tech Innovation Award at the Global Tech Expo for developing an AI-driven automation system.</p>
+                    <img src="C:\Users\poly1\Downloads\trophy.jpg" alt="Best Tech Innovation Award">
+                </div>
+            </li>
+            
+            <li>
+                <strong>Sports Championship Trophy</strong>
+                <div class="event-info">
+                    <p>We secured first place in the National Sports Championship, showcasing excellence in teamwork and athletic performance.</p>
+                    <img src="C:\Users\poly1\Downloads\trophy2.jpg" alt="Sports Championship Trophy">
+                </div>
+            </li>
+            
+            <li>
+                <strong>Best Cultural Performance</strong>
+                <div class="event-info">
+                    <p>Our Cultural Night team was recognized for the Best Cultural Performance, highlighting diverse artistic talents and traditions.</p>
+                    <img src="C:\Users\poly1\Downloads\cult.jpg" alt="Best Cultural Performance">
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Our Organization. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
